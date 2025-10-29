@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "O que há de novo no Next.js 15?",
+    "slug": "o-que-ha-de-novo-no-next-js-15",
+    "author": "Ana Silva",
+    "date": "2025-10-22",
+    "description": "Uma visão detalhada sobre os novos recursos do Next.js 15, incluindo React 19, Caching aprimorado e mais.",
+    "content": "O Next.js 15 chegou com força total, trazendo integração total com o React 19 e suas novas features como 'use server'.\n\nIsso muda fundamentalmente como pensamos sobre componentes e fetching de dados. A performance de build também foi otimizada, com melhorias significativas no cache..."
+  },
+  {
+    "id": 2,
+    "title": "Dominando Server Components",
+    "slug": "dominando-server-components",
+    "author": "Bruno Costa",
+    "date": "2025-10-20",
+    "description": "Aprenda a diferença fundamental entre Server e Client Components e quando usar cada um para máxima performance.",
+    "content": "Server Components são o padrão no App Router. Eles rodam exclusivamente no servidor, permitindo acesso direto a bancos de dados, arquivos e APIs sem expor chaves ou lógica sensível ao cliente.\n\nUse 'use client' no topo de um arquivo para designá-lo como um Client Component, que é necessário para interatividade como `onClick` ou `useState`."
+  },
+  {
+    "id": 3,
+    "title": "SEO Dinâmico com generateMetadata",
+    "slug": "seo-dinamico-com-generatemetadata",
+    "author": "Carla Dias",
+    "date": "2025-10-18",
+    "description": "Um guia prático para gerar metadados de SEO (títulos e descrições) dinamicamente para suas páginas de blog no Next.js.",
+    "content": "A função `generateMetadata` é uma nova API poderosa do App Router. Ela permite que você busque dados (assim como sua página) para popular as tags `<title>` e `<meta name=\"description\">` no `<head>` do HTML.\n\nIsso é crucial para SEO, pois cada página do seu blog terá um título e descrição únicos, melhorando a indexação no Google."
+  }
+]
+

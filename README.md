@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Meu Blog com Next.js 15 (App Router)
 
-## Getting Started
+Este projeto é um blog simples desenvolvido com Next.js 15 (utilizando o App Router). O objetivo foi praticar os conceitos modernos de Data Fetching (com Server Components), Geração Estática (SSG) e SEO Dinâmico.
 
-First, run the development server:
+Os artigos são carregados a partir de um arquivo JSON local e as páginas de cada artigo são geradas dinamicamente.
 
-```bash
+✨ Tecnologias e Conceitos Praticados
+
+Next.js 15: Utilizando o App Router.
+
+TypeScript: Para tipagem do projeto.
+
+Tailwind CSS: Para estilização moderna e responsiva.
+
+Plugin @tailwindcss/typography: Para formatação automática de conteúdo de blog (classe .prose).
+
+Rotas Dinâmicas: Criação da rota app/artigos/[slug]/page.tsx para exibir posts individuais.
+
+Server Components: Busca e renderização de dados (do data/artigos.json) diretamente no servidor, de forma assíncrona.
+
+Geração Estática (SSG): Uso da função generateStaticParams para pré-renderizar todas as páginas de artigos no momento do build, garantindo performance máxima.
+
+SEO Dinâmico: Uso da função generateMetadata para criar <title> e <meta description> únicas para cada página de artigo, melhorando a indexação.
+
+🚀 Como Rodar o Projeto Localmente
+
+Clone o repositório:
+
+git clone [https://github.com/](https://github.com/)[SEU-USUARIO]/[SEU-REPOSITORIO].git
+cd [SEU-REPOSITORIO]
+
+
+Instale as dependências:
+(Use npm, yarn ou pnpm conforme sua preferência)
+
+npm install
+
+
+Rode o servidor de desenvolvimento:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Abra http://localhost:3000 no seu navegador para ver o resultado.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📂 Estrutura Principal
 
-## Learn More
+O projeto utiliza a estrutura simplificada do App Router:
 
-To learn more about Next.js, take a look at the following resources:
+app/page.tsx: A página inicial (Home) que lista todos os artigos.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+app/artigos/[slug]/page.tsx: A Rota Dinâmica. É o "molde" responsável por exibir cada artigo individualmente, buscando os dados com base no slug da URL.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+data/artigos.json: Nosso "banco de dados" local, um arquivo JSON simples de onde os Server Components buscam as informações.
 
-## Deploy on Vercel
+🌐 Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+O projeto foi publicado na Vercel. O processo é automático: basta importar o repositório do GitHub na plataforma Vercel e clicar em "Deploy".
