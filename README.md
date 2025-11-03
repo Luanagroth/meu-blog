@@ -1,58 +1,51 @@
-Meu Blog com Next.js 15 (App Router)
+# Meu Blog com Next.js 15 (App Router)  
 
-Este projeto é um blog simples desenvolvido com Next.js 15 (utilizando o App Router). O objetivo foi praticar os conceitos modernos de Data Fetching (com Server Components), Geração Estática (SSG) e SEO Dinâmico.
+![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js) 
+![TypeScript](https://img.shields.io/badge/TypeScript-4.9-blue?logo=typescript) 
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3.3-blue?logo=tailwind-css) 
+![Vercel](https://img.shields.io/badge/Vercel-deploy-black?logo=vercel)
 
-Os artigos são carregados a partir de um arquivo JSON local e as páginas de cada artigo são geradas dinamicamente.
+Um blog simples desenvolvido com **Next.js 15**, utilizando **App Router**, **Server Components** e **SSG**, com foco em **SEO dinâmico**, rotas dinâmicas e performance.
 
-✨ Tecnologias e Conceitos Praticados
+🔗 **Deploy**: [meu-blog-chi-three.vercel.app](https://meu-blog-chi-three.vercel.app)
 
-Next.js 15: Utilizando o App Router.
+---
 
-TypeScript: Para tipagem do projeto.
+## 🚀 Tecnologias e Conceitos
 
-Tailwind CSS: Para estilização moderna e responsiva.
+- **Next.js 15** – App Router como estrutura principal  
+- **TypeScript** – Tipagem e segurança  
+- **Tailwind CSS + Typography** – Estilização moderna e formatação automática (`.prose`)  
+- **Rotas Dinâmicas** – `app/artigos/[slug]/page.tsx`  
+- **Server Components** – Dados carregados do `data/artigos.json` diretamente no servidor  
+- **SSG** – Pré-renderização de páginas com `generateStaticParams`  
+- **SEO Dinâmico** – Metadados únicos para cada artigo (`generateMetadata`)  
 
-Plugin @tailwindcss/typography: Para formatação automática de conteúdo de blog (classe .prose).
+---
 
-Rotas Dinâmicas: Criação da rota app/artigos/[slug]/page.tsx para exibir posts individuais.
+## 📂 Estrutura do Projeto
 
-Server Components: Busca e renderização de dados (do data/artigos.json) diretamente no servidor, de forma assíncrona.
+app/
+├─ page.tsx # Home - lista todos os artigos
+├─ artigos/
+│ └─ [slug]/page.tsx # Página de cada artigo
+data/
+└─ artigos.json # "Banco de dados" local
 
-Geração Estática (SSG): Uso da função generateStaticParams para pré-renderizar todas as páginas de artigos no momento do build, garantindo performance máxima.
+yaml
+Copiar código
 
-SEO Dinâmico: Uso da função generateMetadata para criar <title> e <meta description> únicas para cada página de artigo, melhorando a indexação.
+---
 
-🚀 Como Rodar o Projeto Localmente
+## 💻 Rodando Localmente
 
-Clone o repositório:
-
-git clone [https://github.com/](https://github.com/)[SEU-USUARIO]/[SEU-REPOSITORIO].git
-cd [SEU-REPOSITORIO]
-
-
-Instale as dependências:
-(Use npm, yarn ou pnpm conforme sua preferência)
-
+```bash
+git clone https://github.com/Luanagroth/meu-blog.git
+cd meu-blog
 npm install
-
-
-Rode o servidor de desenvolvimento:
-
 npm run dev
-
-
-Abra http://localhost:3000 no seu navegador para ver o resultado.
-
-📂 Estrutura Principal
-
-O projeto utiliza a estrutura simplificada do App Router:
-
-app/page.tsx: A página inicial (Home) que lista todos os artigos.
-
-app/artigos/[slug]/page.tsx: A Rota Dinâmica. É o "molde" responsável por exibir cada artigo individualmente, buscando os dados com base no slug da URL.
-
-data/artigos.json: Nosso "banco de dados" local, um arquivo JSON simples de onde os Server Components buscam as informações.
+Abra http://localhost:3000 no navegador.
 
 🌐 Deploy
-
-O projeto foi publicado na Vercel. O processo é automático: basta importar o repositório do GitHub na plataforma Vercel e clicar em "Deploy".
+O projeto foi publicado na Vercel:
+https://meu-blog-chi-three.vercel.app
